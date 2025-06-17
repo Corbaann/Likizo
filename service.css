@@ -69,7 +69,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #00485c;
     padding: 20px 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -81,7 +81,7 @@ body {
   .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color:white;
   }
   
   /* Navigation links */
@@ -114,6 +114,23 @@ body {
       flex-direction: column;
       align-items: flex-start;
     }
+  }
+  
+  
+  
+  .nav-links li a button {
+    padding: 15px 30px;
+    background-color: #4c058d; /* Purple color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links li a button:hover {
+    background-color: #6a1b9a; /* Darker purple on hover */
   }
   footer {
     background-color: #00485c;
