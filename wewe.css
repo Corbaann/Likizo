@@ -67,7 +67,7 @@ body {
 
 .nav-links li a button {
   padding: 15px 30px;
-  background-color: #4c058d; /* Purple color */
+  background-color: #0e011a; /* Purple color */
   color: white;
   border: none;
   border-radius: 5px;
@@ -125,7 +125,7 @@ footer {
 /* Wave effect */
 .wave {
   position: absolute;
-  top: -60px;
+  top: -20px;
   left: 0;
   width: 100%;
   height: 60px;

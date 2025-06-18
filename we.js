@@ -33,3 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`Searching for ${studentsFilter.textContent} on ${coursesFilter.textContent}`);
     });
 });
+// Example: Toggle filter visibility (optional)
+document.querySelectorAll('.clear-filters').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.checked = false;
+      });
+    });
+  });
