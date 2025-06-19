@@ -212,6 +212,7 @@ footer {
   gap: 20px;
   padding: 40px;
   background-color: whitesmoke;
+  
 }
 
 .filters, .instructions {
@@ -222,7 +223,7 @@ footer {
 }
 
 .filters {
-  width: 60%;
+  width: 80%;
 }
 
 .instructions {
