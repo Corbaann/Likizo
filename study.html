@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RemoteLearning Courses</title>
   <link rel="stylesheet" href="service.css">
-  <script src="script.js"></script>
+  
 </head>
 <body>
     <nav class="navbar">
@@ -76,11 +76,25 @@
         </select>
         <div class="choice">
         <button class="submit-button">Book Class</button>
+      </div>
+        <div id="paymentForm" style="display: none;">
+          <h3>Payment Details:</h3>
+          <label for="cardNumber" class="lebel22">Card Number:</label>
+          <input type="text" id="cardNumber" class="input1" placeholder="XXXX XXXX XXXX XXXX" required />
+    
+          <label for="expiryDate"class="lebel22">Expiry Date:</label>
+          <input type="text" id="expiryDate" placeholder="MM/YY" required />
+    
+          <label for="cvv"class="lebel22">CVV:</label>
+          <input type="text" id="cvv" class="input1" placeholder="XXX" required />
+    
+          <button id="submitPaymentBtn">Submit Payment</button>
+        
+      
     </div>
       </form>
   </div>
-  
-  
+
   <!-- Course Card 2 -->
   <div class="course-card">
     <img src="images/chem.jpg" alt="OpenLearning Image">
@@ -392,6 +406,7 @@
         <p>0706846574</p>
       </div>
     </div>
+    <script src="script.js"></script>
   </footer>
 </body>
 </html>
