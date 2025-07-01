@@ -41,3 +41,22 @@ document.querySelectorAll('.clear-filters').forEach(button => {
       });
     });
   });
+// Function to validate login form
+function validateLoginForm() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === '' || password === '') {
+        alert('Please fill in all fields.');
+        return false;
+    }
+    return true;
+}
+
+// Handle login form submission
+document.getElementById('login-form').addEventListener('submit', (event) => {
+    if (!validateLoginForm()) {
+        event.preventDefault(); // Prevent form submission if validation fails
+    }
+});
+  

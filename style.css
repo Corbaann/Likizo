@@ -12,6 +12,29 @@ body {
   margin: 0;
   padding: 0;
 }
+/* media responsive */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    padding: 30px 10px;
+  }
+
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
