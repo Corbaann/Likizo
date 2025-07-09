@@ -7,7 +7,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // MySQL Connection
@@ -32,7 +32,25 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
+app.post('/register', async (req, res) => {
+    const { username, email, password } = req.body;
+  
+    if (!username || !email || !password) {
+      return res.status(400).json({ message: 'All fields are required' });
+    }
+  
+    try {
+      const hashedPassword = await bcrypt.hash(password, 10);
+  
+      const sql = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
+      db.query(sql, [username, email, hashedPassword], (err, result) => {
+        if (err) return res.status(500).json({ error: err.message });
+        res.json({ message: 'User registered successfully' });
+      });
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
    // Select elements
    const form = document.getElementById("loginForm");
    const messageDiv = document.getElementById("message");
@@ -74,24 +92,7 @@ app.listen(PORT, () => {
      }
    
 
-app.post('/register', async (req, res) => {
-    const { username, email, password } = req.body;
+     
+    });
   
-    if (!username || !email || !password) {
-      return res.status(400).json({ message: 'All fields are required' });
-    }
-  
-    try {
-      const hashedPassword = await bcrypt.hash(password, 10);
-  
-      const sql = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
-      db.query(sql, [username, email, hashedPassword], (err, result) => {
-        if (err) return res.status(500).json({ error: err.message });
-        res.json({ message: 'User registered successfully' });
-      });
-    } catch (err) {
-      res.status(500).json({ error: err.message });
-    }
-  });
-});
-  
+
