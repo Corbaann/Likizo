@@ -95,4 +95,75 @@ app.post('/register', async (req, res) => {
      
     });
   
+//get access token
+    const axios = require('axios');
+const { v4: uuidv4 } = require('uuid');
+
+require('dotenv').config();
+
+const getToken = async () => {
+    const auth = Buffer.from(`${process.env.CONSUMER_KEY}:${process.env.CONSUMER_SECRET}`).toString('base64');
+
+    try {
+        const response = await axios.get('https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials', {
+            headers: {
+                authorization: `Basic ${auth}`,
+            },
+        });
+        return response.data.access_token;
+    } catch (error) {
+        console.error('Error getting token:', error.response?.data || error.message);
+    }
+};
+
+// Initiate payment
+const initiatePayment = async (phoneNumber, amount) => {
+  const token = await getToken();
+  const url = ' https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest ';
+
+  const timestamp = new Date().toISOString().replace(/[^0-9]/g, '').slice(0, -3);
+  const password = Buffer.from(`${process.env.BUSINESS_SHORTCODE}${process.env.PASSKEY}${timestamp}`).toString('base64');
+
+  const data = {
+      BusinessShortCode: process.env.BUSINESS_SHORTCODE,
+      Password: password,
+      Timestamp: timestamp,
+      TransactionType: 'CustomerPayBillOnline',
+      Amount: amount,
+      PartyA: phoneNumber,
+      PartyB: process.env.BUSINESS_SHORTCODE,
+      PhoneNumber: phoneNumber,
+      CallBackURL: 'https://yourdomain.com/callback ',
+      AccountReference: 'TestCompany',
+      TransactionDesc: 'Payment for Order #123'
+  };
+
+  try {
+      const response = await axios.post(url, data, {
+          headers: {
+              authorization: `Bearer ${token}`
+          }
+      });
+      console.log(response.data);
+  } catch (error) {
+      console.error('Payment initiation failed:', error.response?.data || error.message);
+  }
+};
+
+
+// Callback endpoint for M-Pesa
+app.post('/callback', (req, res) => {
+  const callbackData = req.body;
+  console.log('Callback received:', callbackData);
+
+  // Log or save the result to your DB
+  if (callbackData.Body.stkCallback.ResultCode === 0) {
+      console.log("Payment successful!");
+      // Update order status here
+  } else {
+      console.log("Payment failed:", callbackData.Body.stkCallback.ResultDesc);
+  }
+
+  res.status(200).send("OK");
+});
 
