@@ -21,32 +21,31 @@
  
     <div class="contaainer">
       <h2>Log in Details</h2>
-      <form id="loginForm">
+      <form action="Register.php" method="POST" id="loginform">
         <div class="form-group">
-          <label for="firstName">First Name</label>
-          <input type="text" id="firstName" placeholder="FirstName" required />
+          <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" placeholder="first_name" required name="first_name" />
         </div>
         <div class="form-group">
           <label for="surname">Surname</label>
-          <input type="text" id="surname" placeholder="SirName" required />
+          <input type="text" id="surname" placeholder="SirName" required name="surname" />
         </div>
         <div class="form-group">
           <label for="username">User Name</label>
-          <input type="text" id="username" placeholder="your name" required />
+          <input type="text" id="username" placeholder="your name" required name="username"/>
         </div>
         <div class="form-group">
           <label for="email">E-mail</label>
-          <input type="email" id="email" placeholder="youremail@gmail.com" required />
+          <input type="email" id="email" placeholder="youremail@gmail.com" required name="email" />
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="123@password" required />
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="123@password" required name="password" />
         </div>
-      
-       <button type="submit" class="btnnn">Enroll</button></a>
+    
+        <button type="submit" class="btnnn">Enroll</button>
       
       </form>
-      <a href="about.html"><button>Our services</button></a>
       <div id="message">
       
       </div>

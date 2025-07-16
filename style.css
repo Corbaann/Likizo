@@ -651,5 +651,52 @@ header h1 {
 .ccta-button a button:hover {
   background-color: #6a1b9a; /* Darker purple on hover */
 }
+/* Login Form Styles */
+.contaainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+}
+
+#loginform {
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+
+  
+  
+}
+
+.btnnn {
+  padding: 15px 30px;
+  background-color: #1d0237; /* Purple color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 100%;
+  
+}
+
+.btnnn:hover {
+  background-color: #6a1b9a; /* Darker purple on hover */
+}
 
 

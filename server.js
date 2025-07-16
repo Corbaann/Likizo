@@ -60,20 +60,19 @@ app.post('/register', async (req, res) => {
      event.preventDefault(); // Prevent default form submission
    
      // Get input values
-     const firstName = document.getElementById("firstName").value.trim();
-     const surname = document.getElementById("surname").value.trim();
-     const username = document.getElementById("usernamer").value.trim();
-     const email = document.getElementById("email").value.trim();
-     const password = document.getElementById("password").value.trim();
+     const firstName = document.getElementById("first_name").value;
+     const surname = document.getElementById("surname").value;
+     const username = document.getElementById("usernamer").value;
+     const email = document.getElementById("email").value;
+     const password = document.getElementById("password").value;
    
      // Reset any previous messages
      messageDiv.textContent = "";
    
      // Basic validation
-     if (!firstName || !surname || !username || !email || !password) {
-       messageDiv.textContent = "Please fill out all fields.";
-       messageDiv.className = "error";
-       return;
+     if (!first_name || !surname || !username || !email || !password) {
+      alert('Please fill out all fields.');
+      return;
      }
    
      // Validate email format
@@ -90,6 +89,7 @@ app.post('/register', async (req, res) => {
        messageDiv.className = "error";
        return;
      }
+     alert(`Enrollment successful!\n\nfirst_name: ${first_name}\nSurname: ${surname}\nUsername: ${username}\nEmail: ${email}`);
    
 
      
