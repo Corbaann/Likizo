@@ -57,10 +57,50 @@
         button[type="submit"]:hover {
             background-color: #246f45;
         }
+        @media (max-width: 768px) {
+  body {
+      font-size: 14px; /* Smaller base font size */
+      padding: 10px; /* Reduce padding */
+      flex-direction: column;
+  }
+  .payment-form-container{
+        width: 100%; /* Make the form container responsive */
+        margin: 20px auto; /* Adjust margin for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+  }
+  form {
+        width: 100%; /* Make the form container responsive */
+        margin: 20px auto; /* Adjust margin for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px; /* Reduce padding */
+    margin: 10px 0; /* Reduce margin */
+    width: 100%;
+  }
+  .nav-links {
+    margin: 5px 0; /* Reduce margin between links */
+    flex-direction: row; /* Stack links vertically */
+    gap: 5px; /* Reduce spacing between links */
+    width: 100%; 
+    margin: 0px; /* Reset margin */
+
+  }
+}
     </style>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <nav class="navbar">
+        <div class="logo">LIKIZO</div>
+        <ul class="nav-links">
+          <li><a href="index.html"><button>Home</button></a></li>
+          
+            <li><a href="enroll.html"><button>Enroll</button></a></li>
+        </ul>
+      </nav>
 <div class="payment-form-container">
     <h2>Make a Payment</h2>
     <form action="#" method="POST" target="_parent">
