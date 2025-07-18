@@ -47,12 +47,12 @@ To **bridge the learning gap** for students who may not afford expensive tuition
 
 | Layer       | Technology                   |
 |------------|------------------------------|
-| Frontend   | HTML, CSS, JavaScript, React (optional) |
-| Backend    | PHP / Node.js / Python (Flask or Django) |
-| Database   | MySQL / MongoDB              |
-| Hosting    | GitHub Pages / Vercel / Heroku / AWS |
-| Authentication | Firebase / JWT / OAuth |
-| Payments   | M-Pesa / PayPal / Stripe     |
+| Frontend   | HTML, CSS, JavaScript,  |
+| Backend    | PHP / Node.js /  |
+| Database   | MySQL |
+| Hosting    | GitHub Pages / Vercel / |
+| Authentication | Firebase  |
+| Payments   | M-Pesa|
 
 ---
 
