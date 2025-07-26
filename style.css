@@ -832,3 +832,6 @@ header h1 {
 .course-meta i {
   margin-right: 5px;
 }
+.round-icon {
+  border-radius: 50%;
+}
