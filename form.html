@@ -18,21 +18,40 @@
        
       </ul>
   </nav>
-<div class="payment-form">
-    <h2>Pay with M-Pesa</h2>
-    <form action="stkpush.php" method="POST">
-      <label>Amount:
-        <input type="number" name="amount" required />
-      </label>
-      <label>Phone (e.g., 2547XXXXXXXX):
-        <input type="text" name="phone" required />
-      </label>
-      <label>Email:
-        <input type="email" name="email" required />
-      </label>
-      <button type="submit">Pay Now</button>
-    </form>
-  </div>
+  <a href="index.html" class="back-btn">← Back to Classes</a>
+    
+  <div class="form-container">
+      <h1>Book Your Class</h1>
+      
+      <div class="form-group">
+          <label for="className">Selected Class:</label>
+          <input type="text" id="className" name="className" readonly>
+      </div>
+      
+      <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" value="100" readonly>
+      </div>
+      
+      <div class="amount-display">
+        Total: KES 100
+      </div>
+      
+      <form id="paymentForm">
+          <div class="form-group">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g., 254712345678" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" placeholder="e.g., example@email.com" required>
+          </div>
+          
+          <button type="submit" class="submit-btn">Proceed to Payment</button>
+      </form>
+       </div>
+       <script src="form.js"></script>
   <footer>
     <div class="wave"></div>
     <div class="footer-container">
