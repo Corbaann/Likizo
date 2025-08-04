@@ -371,7 +371,7 @@ input, select {
   cursor: pointer;
 }
 
-.submit-button {
+.submitBtn {
   width: 100%;
   padding: 40px 30px;
   background-color:  #00485c;
