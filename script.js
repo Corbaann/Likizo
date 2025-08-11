@@ -249,3 +249,68 @@ document.addEventListener('DOMContentLoaded', function() {
     form.reset();
   });
       
+
+  document.getElementById('searchInput').addEventListener('input', function () {
+  const searchQuery = this.value.toLowerCase();
+  const videoCards = document.querySelectorAll('.video-card');
+
+  videoCards.forEach(card => {
+    const title = card.querySelector('.video-details h3').textContent.toLowerCase();
+    const category = card.querySelector('.category').textContent.toLowerCase();
+
+    if (title.includes(searchQuery) || category.includes(searchQuery)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+
+
+document.querySelectorAll('.show-solution-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.question-card');
+    const questionText = card.querySelector('p').textContent;
+    const solution = card.dataset.solution;
+
+    // Create a modal or overlay to display the solution
+    const modal = document.createElement('div');
+    modal.classList.add('solution-modal');
+    modal.innerHTML = `
+      <div class="modal-content">
+        <h2>Solution for:</h2>
+        <p>${questionText}</p>
+        <h3>Answer:</h3>
+        <p>${solution}</p>
+        <button class="close-btn">Close</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Close the modal when the close button is clicked
+    modal.querySelector('.close-btn').addEventListener('click', () => {
+      modal.remove();
+    });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.tabs li a');
+
+  // Add click event listeners to each tab
+  tabs.forEach(tab => {
+    tab.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      // Remove 'active' class from all tabs
+      tabs.forEach(t => t.classList.remove('active'));
+
+      // Add 'active' class to the clicked tab
+      tab.classList.add('active');
+    });
+  });
+
+  // Initially activate the first tab
+  tabs[0].classList.add('active');
+});

@@ -1125,3 +1125,313 @@ main h2 {
   font-size: 0.9rem;
   color: #777;
 }
+
+/* Reset some default styles */
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.search-bar {
+  position: relative;
+  width: 300px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-card {
+  width: calc(33.33% - 20px); /* Adjust for spacing */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-thumbnail {
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-thumbnail h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.video-details {
+  padding: 15px;
+}
+
+.video-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.video-details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.category {
+  font-weight: bold;
+  color: #3B82F6;
+}
+/* ... existing CSS ... */
+
+.watch-btn {
+  display: inline-block;
+  background-color: #ff0000;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.watch-btn:hover {
+  background-color: #cc0000;
+}
+
+/* ... rest of existing CSS ... */
+
+/* Reset some default styles */
+
+
+
+
+
+
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.question-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.question-card {
+  width: calc(33.33% - 20px); /* Adjust for spacing */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: 2px solid #007bff; /* Blue border */
+}
+
+.difficulty-badge {
+  background-color: #ff6b6b; /* Red for Hard */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.difficulty-badge.medium {
+  background-color: #ffbb33; /* Yellow for Medium */
+}
+
+.question-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.question-card p {
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subject {
+  font-weight: bold;
+  color: #007bff; /* Blue for subject */
+}
+
+.show-solution-btn, .save-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.show-solution-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.show-solution-btn:hover {
+  background-color: #0056b3;
+}
+
+.save-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.save-btn:hover {
+  background-color: #aaa;
+}
+
+/* Reset some default styles */
+
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.tabs li {
+  margin-right: 20px;
+}
+
+.tabs li a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.tabs li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.tabs li a.active::after {
+  background-color: #007bff; /* Blue underline */
+}
+
+main {
+  padding: 20px;
+}
+
+.resource-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.resource-card {
+  width: calc(33.33% - 20px); /* Adjust for spacing */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.resource-card .icon {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.resource-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.resource-card p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.resource-card .details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.resource-card .details span {
+  font-size: 12px;
+  color: #666;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e0e0e0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #ccc;
+}
