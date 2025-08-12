@@ -1172,7 +1172,7 @@ main {
 
 .video-card {
   width: calc(33.33% - 20px); /* Adjust for spacing */
-  background-color: #fff;
+  background-color: #efeeee;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1268,12 +1268,12 @@ main {
 }
 
 .question-card {
-  width: calc(33.33% - 20px); /* Adjust for spacing */
+  width: calc(20.33% - 20px); /* Adjust for spacing */
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 50px;
   border: 2px solid #007bff; /* Blue border */
 }
 
@@ -1381,18 +1381,18 @@ main {
 }
 
 .resource-card {
-  width: calc(33.33% - 20px); /* Adjust for spacing */
-  background-color: #fff;
+  width: calc(20.33% - 20px); /* Adjust for spacing */
+  background-color: #e4e3e3;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 70px;
   position: relative;
 }
 
 .resource-card .icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #e0e0e0;
   border-radius: 8px;
   position: absolute;
@@ -1426,12 +1426,81 @@ main {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
-  background-color: #e0e0e0;
-  color: #333;
+  background-color: #0f4902;
+  color: white;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .download-btn:hover {
   background-color: #ccc;
+}
+
+@media (max-width: 600px) {
+  .question-grid {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+
+  .question-card {
+     padding: 70px;
+    width: 100%; /* Full width for smaller screens */
+    box-shadow: none; /* Remove shadow for simplicity */
+
+  }
+    .question-card p {
+    font-size: 1.2rem;
+    width: 100%; /* Full width for smaller screens */
+     
+  }
+
+.resource-grid{
+    margin: 20px 15px;
+    padding: 20px;
+  }
+
+  .resource-card {
+    width: 100%; /* Full width for smaller screens */
+    padding: 70px;
+    box-shadow: none; /* Remove shadow for simplicity */
+  }
+
+  .resource-card h2 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .resource-card p {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+  
+  .resource-card .icon {
+    width: 30px; /* Adjust icon size for smaller screens */
+    height: 30px;
+}
+.video-grid {
+    margin: 20px 15px;
+    padding: 5px;
+  }
+
+  .video-card {
+    width: 100%; /* Full width for smaller screens */
+    padding: 50px;
+    box-shadow: none; /* Remove shadow for simplicity */
+  }
+    .video-thumbnail {
+    height: 150px; /* Adjust height for smaller screens */
+    padding: 10px;
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    width: 200px; /* Adjust width for smaller screens */
+
+    }
+  .video-thumbnail h2 {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+  .video-details {
+    padding: 30px;
+  }
+  .video-details h3 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
 }
